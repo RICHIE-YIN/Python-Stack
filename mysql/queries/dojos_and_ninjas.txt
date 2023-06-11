@@ -1,0 +1,56 @@
+Query: Create 3 new dojos:
+insert into dojos (name, created_at, updated_at)
+values ('dojo1', now(), now());
+insert into dojos (name, created_at, updated_at)
+values ('dojo2', now(), now());
+insert into dojos (name, created_at, updated_at)
+values ('dojo3', now(), now());
+
+Query: Delete the 3 dojos you just created:
+delete from dojos
+where id = 1;
+delete from dojos
+where id = 2;
+delete from dojos
+where id = 3;
+
+Query: Create 3 more dojos:
+insert into dojos (name, created_at, updated_at)
+values ('dojo1', now(), now());
+insert into dojos (name, created_at, updated_at)
+values ('dojo2', now(), now());
+insert into dojos (name, created_at, updated_at)
+values ('dojo3', now(), now());
+
+Query: Create 3 ninjas that belong to the first dojo:
+insert into ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+values ('ninja1', 'dojo1', 20, now(), now(), 1);
+insert into ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+values ('ninja2', 'dojo1', 20, now(), now(), 1);
+insert into ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+values ('ninja3', 'dojo1', 20, now(), now(), 1);
+
+Query: Create 3 ninjas that belong to the second dojo:
+insert into ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+values ('ninja1', 'dojo2', 20, now(), now(), 2);
+insert into ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+values ('ninja2', 'dojo2', 20, now(), now(), 2);
+insert into ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+values ('ninja3', 'dojo2', 20, now(), now(), 2);
+
+Query: Create 3 ninjas that belong to the third dojo:
+insert into ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+values ('ninja1', 'dojo3', 20, now(), now(), 3);
+insert into ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+values ('ninja2', 'dojo3', 20, now(), now(), 3);
+insert into ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+values ('ninja3', 'dojo3', 20, now(), now(), 3);
+
+Query: Retrieve all the ninjas from the first dojo:L
+select * from ninjas where dojo_id =1;
+
+Query: Retrieve all the ninjas from the last dojo:
+select * from ninjas where dojo_id =3;
+
+Query: Retrieve the last ninja's dojo
+select * from ninjas where id = 16;

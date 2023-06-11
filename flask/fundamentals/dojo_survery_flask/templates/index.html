@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action ='/users' method='post'>
+        <label for="yourname">Your Name:</label>
+        <input type="Text" name="yourname" id="yourname">
+        <br>
+        <label for="Location">Location:</label>
+        <select name="Location" id="Location">
+        <option value="Seattle">Seattle</option>
+        <option value="Long Beach">Long Beach</option>
+        <option value="Dallas">Dallas</option>
+        <option value="Las Vegas">Las Vegas</option>
+        </select>
+        <br>
+        <label for="language">Favorite Language"</label>
+        <select name="language" id="language">
+        <option value="Python">Python</option>
+        <option value="JS">JS</option>
+        <option value="C#">C#</option>
+        <option value="C++">C++</option>
+        </select>
+        <br>
+        <label for="comment">Comment (optional):</label>
+        <br>
+        <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+</html>

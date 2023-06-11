@@ -1,0 +1,37 @@
+class BankAccount():
+
+    def __init__(self, name, int_rate, balance): 
+        self.name = name
+        self.balance = balance
+        self.int_rate = int_rate
+
+    def deposit(self, amount):
+        self.balance += amount
+
+    def withdraw(self, amount):
+        if(self.balance - amount) >= 0:
+            self.balance -= amount
+        else:
+            print("Insufficient Funds: Charging a $5 fee")
+            self.balance -= 5
+
+    def display_account_info(self):
+        self.balance
+
+    def yield_interest(self):
+        self.balance += self.balance * self.int_rate
+
+a1 = BankAccount('Richie Yin', 0.015, 7000)
+a1.deposit(750),a1.deposit(750),a1.deposit(750),a1.withdraw(2000),a1.yield_interest(), a1.display_account_info, print (a1.balance)
+
+a2 = BankAccount('Kayla Yin', 0.103, 5000)
+a2.deposit(3000),a2.deposit(3000),a2.withdraw(500),a2.withdraw(500),a2.withdraw(500),a2.withdraw(500),a2.yield_interest(), a2.display_account_info, print (a2.balance)
+
+
+    # @classmethod
+    # def print_all_accounts(cls):
+    #     for account in cls.accounts:
+    #         account.display_account_info()
+
+
+#https://programming-21.mooc.fi/part-8/4-defining-methods https://stackoverflow.com/questions/41817578/basic-method-chaining 
